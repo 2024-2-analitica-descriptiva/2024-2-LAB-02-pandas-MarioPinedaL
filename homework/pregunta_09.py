@@ -23,3 +23,22 @@ def pregunta_09():
     39  39  E   5  1998-01-26  1998
 
     """
+
+
+
+    import pandas as pd
+
+
+    archivo_tsv = "files/input/tbl0.tsv"
+    
+
+    df = pd.read_csv(archivo_tsv, sep="\t")
+
+
+    df['year'] = df['c3'].astype(str).str[:4]
+    
+
+    return df
+
+if __name__ == "__main__":
+    print(pregunta_09())

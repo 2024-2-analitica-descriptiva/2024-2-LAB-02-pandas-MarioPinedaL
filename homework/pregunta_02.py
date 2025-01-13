@@ -14,3 +14,30 @@ def pregunta_02():
     4
 
     """
+
+
+
+
+def pregunta_02():
+    """
+    ¿Cuál es la cantidad de columnas en la tabla `tbl0.tsv`?
+
+    Rta/
+    4
+
+    """
+
+    import pandas as pd
+
+    archivo_tsv = "files/input/tbl0.tsv"
+    
+
+    df = pd.read_csv(archivo_tsv, sep="\t")
+    
+
+    return len(df.columns)
+
+
+if __name__ == "__main__":
+    print(pregunta_02())
+

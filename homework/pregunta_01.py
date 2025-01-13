@@ -14,3 +14,20 @@ def pregunta_01():
     40
 
     """
+
+
+    import pandas as pd
+
+    archivo_tsv = "files/input/tbl0.tsv"
+    df = pd.read_csv(archivo_tsv, sep="\t")
+
+
+    numero_filas = len(df)
+
+    return numero_filas
+
+
+
+if __name__ == "__main__":
+    print(pregunta_01())
+
